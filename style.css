@@ -86,7 +86,14 @@ body {
 .header-logo img {
   width: 100px;
   height: auto;
+  filter: invert(100%) grayscale(100%) brightness(0%);
+  transition: transform 0.5s ease, filter 0.5s ease; /* Smooth animation */
 }
+
+.header-logo img:hover {
+  transform: scale(1.1); 
+}
+
 
 .header-list {
   display: flex;
