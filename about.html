@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - HamroPasal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/0e53af926d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <div id="header">
+      <div class="header-logo">
+        <a href="index.html"><img src="images/logo.png" alt="HamroPasal Logo" /></a>
+      </div>
+      <div class="header-list">
+        <nav class="header-list-nav">
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main section -->
+  <main>
+    <!-- About Us Section -->
+    <section class="about-us section-p1">
+      <h1>About Us</h1>
+      <p>Welcome to HamroPasal! We are dedicated to providing you with the latest fashion trends and high-quality apparel. Our mission is to bring style and comfort to your wardrobe with a curated selection of modern designs.</p>
+      
+      <!-- Our Story -->
+      <div class="about-story">
+        <h2>Our Story</h2>
+        <p>HamroPasal was founded with a passion for fashion and a commitment to quality. Our journey started with a small boutique, and over the years, we have grown into a leading online fashion retailer. We take pride in offering products that are both stylish and affordable, and we strive to exceed our customers' expectations with every purchase.</p>
+      </div>
+      
+      <!-- Our Team -->
+      <div class="about-team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+          <img src="images/team/member1.jpg" alt="Team Member 1" />
+          <h3>John Doe</h3>
+          <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team/member2.jpg" alt="Team Member 2" />
+          <h3>Jane Smith</h3>
+          <p>Chief Marketing Officer</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team/member3.jpg" alt="Team Member 3" />
+          <h3>Michael Brown</h3>
+          <p>Head of Design</p>
+        </div>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="about-contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, feel free to reach out to us. We are here to assist you and ensure you have a great experience with HamroPasal.</p>
+        <p>Email: <a href="mailto:info@hamropasal.com">info@hamropasal.com</a></p>
+        <p>Phone: +1 (234) 567-890</p>
+        <p>Address: 123 Fashion Street, City, Country</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 HamroPasal. All rights reserved.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', (e) => {
+      hamburger.classList.toggle('toggle');
+      navLinks.classList.toggle('open');
+      e.stopPropagation(); // Prevent the click event from bubbling up to the document
+    });
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('toggle');
+        navLinks.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+
+</html>
+

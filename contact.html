@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - HamroPasal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/0e53af926d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <div id="header">
+      <div class="header-logo">
+        <a href="index.html"><img src="images/logo.png" alt="HamroPasal Logo" /></a>
+      </div>
+      <div class="header-list">
+        <nav class="header-list-nav">
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main section -->
+  <main>
+    <!-- Contact Us Section -->
+    <section class="contact-us section-p1">
+      <h1>Contact Us</h1>
+      <p>If you have any questions or need assistance, please reach out to us using the form below or via our contact details.</p>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="submit_form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="contact-details">
+        <h2>Our Contact Details</h2>
+        <p>Email: <a href="mailto:info@hamropasal.com">info@hamropasal.com</a></p>
+        <p>Phone: +1 (234) 567-890</p>
+        <p>Address: 123 Fashion Street, City, Country</p>
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div class="contact-map">
+        <h2>Find Us</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3565.917631693141!2d87.27264957509155!3d26.6511195768041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6dd263d32fa7%3A0x60a68c89ed3190b4!2sItahari%20Namuna%20College!5e0!3m2!1sen!2sus!4v1725763664300!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 HamroPasal. All rights reserved.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', (e) => {
+      hamburger.classList.toggle('toggle');
+      navLinks.classList.toggle('open');
+      e.stopPropagation(); // Prevent the click event from bubbling up to the document
+    });
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('toggle');
+        navLinks.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+
+</html>
+
