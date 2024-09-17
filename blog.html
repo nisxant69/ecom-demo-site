@@ -11,7 +11,6 @@
 </head>
 
 <body>
-  <!-- Header section -->
   <header>
     <div id="header">
       <div class="header-logo">
@@ -35,60 +34,48 @@
       </div>
     </div>
   </header>
-
-  <!-- Main section -->
   <main>
-    <!-- Blog Header -->
     <section class="blog-header">
-      <h1>Blog</h1>
-      <p>Stay updated with our latest news and articles.</p>
+      <h3>Stay updated with our latest news and articles.</h3>
     </section>
-
-    <!-- Blog Posts -->
     <section class="blog-posts section-p1">
       <article class="blog-post">
-        <img src="images/blog/blog1.jpg" alt="Blog Post 1" />
-        <h2><a href="blog-post1.html">The Ultimate Guide to Summer Fashion Trends</a></h2>
+        <img src="images/banner/b1.jpg" alt="Blog Post 1" />
+        <h2><a href="#">The Ultimate Guide to Summer Fashion Trends</a></h2>
         <p>Discover the hottest fashion trends for this summer and how you can stay stylish and comfortable. From vibrant colors to new fabric technologies, this guide has everything you need to know.</p>
-        <a href="blog-post1.html" class="read-more">Read More</a>
+        <a href="#" class="read-more">Read More</a>
       </article>
       <article class="blog-post">
-        <img src="images/blog/blog2.jpg" alt="Blog Post 2" />
-        <h2><a href="blog-post2.html">Top 10 Must-Have Accessories for 2024</a></h2>
+        <img src="images/banner/b2.jpg" alt="Blog Post 2" />
+        <h2><a href="#">Top 10 Must-Have Accessories for 2024</a></h2>
         <p>Upgrade your wardrobe with these essential accessories. Whether you're looking for statement pieces or practical additions, these top 10 picks will keep you on-trend.</p>
-        <a href="blog-post2.html" class="read-more">Read More</a>
+        <a href="#" class="read-more">Read More</a>
       </article>
       <article class="blog-post">
-        <img src="images/blog/blog3.jpg" alt="Blog Post 3" />
-        <h2><a href="blog-post3.html">How to Build a Sustainable Wardrobe</a></h2>
+        <img src="images/banner/b3.jpg" alt="Blog Post 3" />
+        <h2><a href="#">How to Build a Sustainable Wardrobe</a></h2>
         <p>Learn how to create a wardrobe that is both fashionable and eco-friendly. This guide provides tips on choosing sustainable fabrics, reducing waste, and supporting ethical brands.</p>
-        <a href="blog-post3.html" class="read-more">Read More</a>
+        <a href="#" class="read-more">Read More</a>
       </article>
     </section>
   </main>
-
-  <!-- Footer section -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2024 HamroPasal. All rights reserved.</p>
       <div class="socials">
         <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#"><i class="fa-brands fa-telegram"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-twitter"></i></a>
       </div>
     </div>
   </footer>
-
   <script>
     const hamburger = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
-
     hamburger.addEventListener('click', (e) => {
       hamburger.classList.toggle('toggle');
       navLinks.classList.toggle('open');
-      e.stopPropagation(); // Prevent the click event from bubbling up to the document
+      e.stopPropagation();
     });
     document.addEventListener('click', (e) => {
       if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
@@ -100,4 +87,3 @@
 </body>
 
 </html>
-
